@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps Tools Portal</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            margin-top: 40px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .btn {
+            display: block;
+            width: 250px;
+            margin: 15px auto;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🚀 DevOps Tools Dashboard</h1>
+
+<div class="container">
+    <button class="btn" onclick="goTo('jenkins')">Jenkins</button>
+    <button class="btn" onclick="goTo('docker')">Docker</button>
+    <button class="btn" onclick="goTo('kubernetes')">Kubernetes</button>
+</div>
+
+<script>
+function goTo(tool) {
+    // IMPORTANT: Replace with your ALB DNS
+    const baseURL = "http://<ALB-DNS>";
+
+    window.location.href = baseURL + "/" + tool + "/";
+}
+</script>
+
+</body>
+</html>
